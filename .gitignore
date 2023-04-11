@@ -1,4 +1,6 @@
 # Django #
+migrations/
+archives/settings.py
 *.log
 *.pot
 *.pyc

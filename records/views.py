@@ -1,10 +1,13 @@
 from django.http import HttpResponse, Http404, HttpResponseNotFound
 from django.template import loader
+
 from .models import Record
 
 
 def records(request):
+
     myrecords = Record.objects.all().values()
+
     template = loader.get_template('all_records.html')
     context = {
         'myrecords': myrecords,
@@ -12,14 +15,6 @@ def records(request):
     return HttpResponse(template.render(context, request))
 
 
-def details1(request, id):
-    myrecord = Record.objects.get(id=id)
-    print(myrecord.title)
-    template = loader.get_template('details.html')
-    context = {
-        'myrecord': myrecord,
-    }
-    return HttpResponse(template.render(context, request))
 
 def details(request, id):
     details_value = ''
