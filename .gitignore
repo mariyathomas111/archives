@@ -1,5 +1,5 @@
 # Django #
-archives/records/migrations/
+migrations/
 archives/settings.py
 *.log
 *.pot
