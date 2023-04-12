@@ -18,12 +18,8 @@ class Command(BaseCommand):
             title =res["title"]
             desc=res["scopeContent"]["description"]
             citablereference=res["citableReference"]
-            print(title)
-            print(desc)
             record = Record(id=id, title=title,desc=desc,citablereference=citablereference)
             record.save()
             return 'Record saved'
         else:
-            #raise Exception('Record for ID  "%s" does not exist' % id)
-            print('Record for ID  "%s" does not exist' % id)
             return 'Record for ID  %s does not exist' % id
