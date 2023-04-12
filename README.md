@@ -1,7 +1,9 @@
 
-For the  django app named records
+For the  django app named records,
 There are 2 endpoints as 
+
 http://127.0.0.1:8000/records/
+
 http://127.0.0.1:8000/records/details/id
 
 ex:http://127.0.0.1:8000/records/details/a147aa58-38c5-45fb-a340-4a348efa01e6
